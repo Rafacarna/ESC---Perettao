@@ -1,0 +1,22 @@
+CHIP Add16 {
+     IN a[16], b[16];
+     OUT out[16];
+
+     PARTS:
+     HalfAdder(a=a[0], b=b[0], s=out[0], c= carry); 
+     FullAdder(a=a[1], b=b[1], cin=carry ,s=out[1], c=carry1);
+     FullAdder(a=a[2], b=b[2], cin=carry1 ,s=out[2], c=carry2);
+     FullAdder(a=a[3], b=b[3], cin=carry2 ,s=out[3], c=carry3);
+     FullAdder(a=a[4], b=b[4], cin=carry3 ,s=out[4], c=carry4);
+     FullAdder(a=a[5], b=b[5], cin=carry4 ,s=out[5], c=carry5);
+     FullAdder(a=a[6], b=b[6], cin=carry5 ,s=out[6], c=carry6);
+     FullAdder(a=a[7], b=b[7], cin=carry6 ,s=out[7], c=carry7);
+     FullAdder(a=a[8], b=b[8], cin=carry7 ,s=out[8], c=carry8);
+     FullAdder(a=a[9], b=b[9], cin=carry8 ,s=out[9], c=carry9);
+     FullAdder(a=a[10], b=b[10], cin=carry9 ,s=out[10], c=carry10);
+     FullAdder(a=a[11], b=b[11], cin=carry10 ,s=out[11], c=carry11);
+     FullAdder(a=a[12], b=b[12], cin=carry11 ,s=out[12], c=carry12);
+     FullAdder(a=a[13], b=b[13], cin=carry12 ,s=out[13], c=carry13);
+     FullAdder(a=a[14], b=b[14], cin=carry13 ,s=out[14], c=carry14);
+     FullAdder(a=a[15], b=b[15], cin=carry14 ,s=out[15]);
+}
