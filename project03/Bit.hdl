@@ -1,0 +1,11 @@
+// Registrador de 1 bit
+
+CHIP Bit {
+     IN in, load;
+     OUT out;
+
+     PARTS:
+     Mux(a=outwire, b=in, sel=load, out=out1);
+     DFF(in=out1, out=out, out=outwire);
+
+}
